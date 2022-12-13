@@ -3,6 +3,8 @@
 #include <vector>
 using namespace std;
 
+// -------------------------------------------------------------------------------------------------
+
 string oddOrEven(int number) {
     string answer = "";
     int numOdd = 0;
@@ -28,13 +30,23 @@ string oddOrEven(int number) {
 
 // -------------------------------------------------------------------------------------------------
 
-int main() {
-    cout << oddOrEven(1234) << endl;
-    cout << oddOrEven(11111) << endl;
-    cout << oddOrEven(22222) << endl;
-    cout << oddOrEven(0) << endl;
-    cout << oddOrEven(1) << endl;
-    cout << oddOrEven(2) << endl;
-    cout << oddOrEven(898) << endl;
-    return 0;
+bool unitTest3(){
+    vector<int> input = {1111, 1234, 2244, 13579};
+    vector<string> expectedOutput = {"odd", "mixed", "even", "odd"};
+    for(int i = 0; i < input.size(); i++){
+        string output = oddOrEven(input[i]);
+        if(output != expectedOutput[i]){
+            cout << "Unit test for oddOrEven failed.\n\tInput: " << input[i] << "\n\tOutput: " 
+                 << output << "\n\tExpected output: " << expectedOutput[i] << "\n\n";
+            return false;
+        }
+    }
+    return true;
 }
+
+// -------------------------------------------------------------------------------------------------
+
+// int main() {
+//     cout << unitTest() <<endl;
+//     return 0;
+// }

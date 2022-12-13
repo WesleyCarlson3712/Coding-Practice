@@ -21,14 +21,15 @@ int thingie(char letter, string word) {
 
 // -------------------------------------------------------------------------------------------------
 
-bool unitTest(){
+bool unitTest2(){
     vector<char> letter {'w','e','p','s'};
     vector<string> word {"farts", "pee", "poop", "soupe"};
     vector<int> expected {0,2,3,0};
-
     for(int i = 0; i < expected.size(); i++){
-        if(!thingie(letter[i],word[i]) == expected[i]) {
-            cout << "failed on imputs " << letter[i] << ", " << word[i] << "." << endl;
+        int output = thingie(letter[i],word[i]);
+        if(output != expected[i]) {
+            cout << "Unit test for find2ndchar failed.\n\tInputs: " << letter[i] << ", " << word[i] << "\n\tOutput: " 
+                 << output << "\n\tExpected output: " << expected[i] << "\n\n";
             return false;
         }
     }
@@ -38,7 +39,7 @@ bool unitTest(){
 
 // -------------------------------------------------------------------------------------------------
 
-int main(){
-    cout << unitTest() << endl;
-    return 0;
-}
+// int main(){
+//     cout << unitTest() << endl;
+//     return 0;
+// }

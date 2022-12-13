@@ -18,7 +18,7 @@ int addDigits(int number) {
 
 // -------------------------------------------------------------------------------------------------
 
-int reduiceNumber(int number){
+int reduceNumber(int number){
     while(number > 9){
         number = addDigits(number);
     }
@@ -27,18 +27,22 @@ int reduiceNumber(int number){
 
 // -------------------------------------------------------------------------------------------------
 
-bool unitTest(){
+bool unitTest1(){
     vector<int> input = {1234,5678,90,0};
-    vector<int> output = {1,8,9,0};
-
+    vector<int> expectedOutput = {1,8,9,0};
     for(int i = 0; i < input.size(); i++){
-        if(reduiceNumber(input[i]) != output[i])
+        int output = reduceNumber(input[i]);
+        if(output != expectedOutput[i]){
+            cout << "Unit test for addDigits failed.\n\tInput: " << input[i] << "\n\tOutput: " 
+                 << output << "\n\tExpected output: " << expectedOutput[i] << "\n\n";
             return false;
+        }
     }
 
     return true;
 }
-int main() {
-    cout << unitTest() << endl;
-    return 0;
-}
+
+// int main() {
+//     cout << unitTest() << endl;
+//     return 0;
+// }
