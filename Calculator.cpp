@@ -11,21 +11,43 @@ int devide  (int input1, int input2){return input1 / input2;}
 
 // ------------------------------------------------------------------------------------------------
 
+int getInt(int min, int max){
+    int number = 0;
+    bool invalid = false;
+
+    do{
+        cin >> number;
+        invalid = (number < min || number > max);
+
+        if(invalid) {
+            cout << "dont be stupid, stupid head" <<endl;
+            cin.clear();
+            cin.ignore(10000,'\n');
+        }
+
+    } while(invalid);
+
+    return number;
+}
+
+// ------------------------------------------------------------------------------------------------
+
 int main(){
 
-    int input1;
-    int input2;
-    int action;
-    int answer;
+    int input1 = 0;
+    int input2 = 0;
+    int answer = 0;
 
     cout << "Enter number 1: ";
-    cin >> input1;
-    cout << "Enter number 2: ";
-    cin >> input2;
-    cout << "Select an action:\n1. Add\n2. Subtract\n3. Multiply\n4. Devide\n>>";
-    cin >> action;
+    input1 = getInt(-2147483648, 2147483647);
 
-    switch(action) {
+    cout << "Enter number 2: ";
+    input2 = getInt(-2147483648, 2147483647);
+
+    cout << "Select an action:\n1. Add\n2. Subtract\n3. Multiply\n4. Devide\n>>";
+    answer = getInt(1, 4);
+
+    switch(answer) {
         case 1:
             answer = add(input1, input2);
             break;
