@@ -29,24 +29,3 @@ string oddOrEven(int number) {
 }
 
 // -------------------------------------------------------------------------------------------------
-
-bool unitTest3(){
-    vector<int> input = {1111, 1234, 2244, 13579};
-    vector<string> expectedOutput = {"odd", "mixed", "even", "odd"};
-    for(int i = 0; i < input.size(); i++){
-        string output = oddOrEven(input[i]);
-        if(output != expectedOutput[i]){
-            cout << "Unit test for oddOrEven failed.\n\tInput: " << input[i] << "\n\tOutput: " 
-                 << output << "\n\tExpected output: " << expectedOutput[i] << "\n\n";
-            return false;
-        }
-    }
-    return true;
-}
-
-// -------------------------------------------------------------------------------------------------
-
-// int main() {
-//     cout << unitTest() <<endl;
-//     return 0;
-// }
