@@ -1,9 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <iomanip>
-#include "addDigits.cpp"
-#include "oddOrEven.cpp"
-#include "find2ndchar.cpp"
+#include "unitTest.cpp"
 using namespace std;
 
 int main(){

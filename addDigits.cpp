@@ -26,23 +26,3 @@ int reduceNumber(int number){
 }
 
 // -------------------------------------------------------------------------------------------------
-
-bool unitTest1(){
-    vector<int> input = {1234,5678,90,0};
-    vector<int> expectedOutput = {1,8,9,0};
-    for(int i = 0; i < input.size(); i++){
-        int output = reduceNumber(input[i]);
-        if(output != expectedOutput[i]){
-            cout << "Unit test for addDigits failed.\n\tInput: " << input[i] << "\n\tOutput: " 
-                 << output << "\n\tExpected output: " << expectedOutput[i] << "\n\n";
-            return false;
-        }
-    }
-
-    return true;
-}
-
-// int main() {
-//     cout << unitTest() << endl;
-//     return 0;
-// }
