@@ -17,7 +17,7 @@ int getInt(int min, int max){
 
     do{
         cin >> number;
-        invalid = (number < min || number > max);
+        invalid = (number < min || number > max || cin.fail());
 
         if(invalid) {
             cout << "dont be stupid, stupid head" <<endl;
