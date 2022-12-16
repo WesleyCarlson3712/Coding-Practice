@@ -1,4 +1,9 @@
-// this program finds if a given int contains only odd even or mixed numbers
+/***************************************************************************************************
+* Description:
+*    This program finds if a given int contains only odd even or mixed numbers
+* Author:
+*    Wesley
+***************************************************************************************************/
 #include <iostream>
 #include <vector>
 using namespace std;

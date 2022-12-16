@@ -1,3 +1,10 @@
+/***************************************************************************************************
+* Description:
+    This is a calculator program. The purpose is to learn how to use 'cin' to get a user input and
+    learn how to code defensively so invalid user inputs cannot crash the code.
+* Author:
+*   Wesley
+***************************************************************************************************/
 #include <iostream>
 #include <vector>
 using namespace std;
