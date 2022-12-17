@@ -1,9 +1,13 @@
-// this program finds if a given int contains only odd even or mixed numbers
+/***************************************************************************************************
+* Description:
+*   This program finds if a given int contains only odd even or mixed numbers. The challange teaches
+*   about the use of the modulo operator.
+* Author:
+*   Wesley
+***************************************************************************************************/
 #include <iostream>
 #include <vector>
 using namespace std;
-
-// -------------------------------------------------------------------------------------------------
 
 string oddOrEven(int number) {
     string answer = "";
@@ -27,5 +31,3 @@ string oddOrEven(int number) {
 
     return answer;
 }
-
-// -------------------------------------------------------------------------------------------------
