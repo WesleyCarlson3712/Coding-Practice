@@ -8,6 +8,7 @@
 #include "find2ndchar.cpp"
 #include "oddOrEven.cpp"
 #include "firstDuplicate.cpp"
+#include "findCommonInts.cpp"
 
 bool unitTest1() {
 
@@ -97,5 +98,62 @@ bool unitTest4() {
         }
     }
 
+    return true;
+}
+
+// -------------------------------------------------------------------------------------------------
+
+bool unitTest5() {
+    vector<vector<int>> input1 {
+        {1, 3, 5, 4, 8},  
+        {-3, 9, 0, -5},
+        {12, 58,},
+        {111, 222, 33, 444, 333, 222, 111},
+        {},
+        {0},
+        {1, 1, 1, 1, 1}
+    };
+    vector<vector<int>> input2 {
+        {3,6,9,7,2},
+        {-3,9,0,45},
+        {0,-12},
+        {333, 555, 111, 222, 111, 999},
+        {5, 4, 3, 2, 1},
+        {0},
+        {1, 1, 1, 1, 1}
+    };
+    vector<vector<int>> expected {
+        {3},
+        {-3, 9, 0},
+        {},
+        {111, 222, 333, 222, 111},
+        {},
+        {0},
+        {1, 1, 1, 1, 1}
+    };
+
+    for(int i = 0; i < expected.size(); i++) {
+        vector<int> output = getCommonInts(input1[i], input2[i]);
+        if(output != expected[i]) {
+            cout << "Unit test for find2ndchar failed.\n\tInputs: {"; 
+            
+            for(int j = 0; j < input1[i].size(); j++) {
+                cout << input1[i][j] << " ";
+            }
+            cout<< "} {";
+            for(int j = 0; j < input2[j].size(); j++) {
+                cout << input2[i][j] << " ";
+            }
+            cout << "}\n\tOutput: " << output[i] << "\n\tExpected output: ";
+            for(int j = 0; j < expected[i].size(); j++) {
+                cout << expected[i][j] << " ";
+            }
+            
+            cout << "\n\n";
+            return false;
+        }
+    }
+
+    
     return true;
 }

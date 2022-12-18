@@ -19,13 +19,15 @@ int main() {
         "addDigits.cpp", 
         "find2ndchar.cpp", 
         "oddOrEven.cpp",
-        "FirstDuplicate.cpp"
+        "FirstDuplicate.cpp",
+        "findCommonInts.cpp"
     };
 
     testResults.push_back(unitTest1());
     testResults.push_back(unitTest2());
     testResults.push_back(unitTest3());
     testResults.push_back(unitTest4());
+    testResults.push_back(unitTest5());
 
     for(int i = 0; i < testResults.size(); i++) {
         cout << setw(20) << fileNames[i] << ": ";
