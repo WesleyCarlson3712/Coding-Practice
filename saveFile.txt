@@ -1,0 +1,5 @@
+<character>
+	<health>100</health>
+	<money>125</money>
+	<name>butthead</name>
+</character>
